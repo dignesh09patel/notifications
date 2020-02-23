@@ -176,6 +176,13 @@ class Role_model extends CI_Model {
        return $query->result();
        
     }
+    
+    public function get_product(){
+        $this->db->select('*');
+        $this->db->order_by('sort','asc');
+        $query =  $this->db->get('product');
+         return $query->result_array();
+    }
 }
 
 ?>

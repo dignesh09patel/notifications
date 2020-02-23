@@ -134,6 +134,29 @@ class Admin extends Admin_Controller {
         $data['role_permission'] = $role_permission;
         $this->load->view('admin//template/template', $data);
      }
+     
+     public function drag_drop(){
+        $data['main_content'] = 'admin/dragdrop/dragdrop';
+        $data['title'] = 'Drag and Drop Example';	
+        $product =  $this->role_model->get_product();
+        $data['product'] = $product;
+	
+        $this->load->view('admin//template/template', $data);
+     }
+     
+     public function save_product(){
+       $productids = $_POST['productids'];
+       $position = 1;
+       foreach($productids as $id){
+        $this->db->set('sort',$position);
+        $this->db->where('id',$id);
+        $this->db->update('product');
+        $position ++;
+      }
+      
+     }
+     
+     
 }
 
 ?>

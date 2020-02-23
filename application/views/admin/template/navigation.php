@@ -9,6 +9,7 @@
         <a href="<?php echo base_url()?>admin/admin/notification" class="list-group-item list-group-item-action bg-light">Notification</a>
         <a href="<?php echo base_url()?>admin/admin/sample_data" class="list-group-item list-group-item-action bg-light">Sample Data</a>
         <a href="<?php echo base_url()?>admin/admin/sample_data1" class="list-group-item list-group-item-action bg-light">Sample Data1</a>
+        <a href="<?php echo base_url()?>admin/admin/drag_drop" class="list-group-item list-group-item-action bg-light">Drag and Drop</a>
 
       </div>
     </div>
